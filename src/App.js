@@ -5,8 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <PostList/> */}
-      <ConstLetVar />
+      <PostList/>
+      {/* <ConstLetVar /> */}
     </div>
   );
 }

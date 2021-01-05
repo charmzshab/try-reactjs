@@ -4,7 +4,7 @@ class ConstLetVar extends Component {
   constructor(props){
     super(props);
     let {someVar} = this.props
-    if(someVar == 'Hello'){
+    if(someVar === 'Hello'){
         someVar = 'Hello there again!!'
     }
     console.log(someVar)
