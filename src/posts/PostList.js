@@ -3,13 +3,24 @@ import PostData from '../data/posts.json';
 import PostDetail from './PostDetail';
 
 class PostList extends Component {
- 
+  constructor(props){
+    super(props);
+    this.handleDataCallback = this.handleDataCallback.bind(this);
+  }
+  handleDataCallback(txtMsg){
+    console.log(txtMsg);
+    alert(txtMsg);
+  }
   render () {
     return (
       <div >
         <h1>Hello There</h1>
         {PostData.map((item, index) => {
-          return <PostDetail post={item} key={`post-list-key ${index}`} />
+          return <PostDetail
+           post={item} 
+           key={`post-list-key ${index}`} 
+           dataCallback={this.handleDataCallback}
+           />
         })}
       </div>
     )
