@@ -7,6 +7,7 @@ class PostList extends Component {
     super(props);
     this.handleDataCallback = this.handleDataCallback.bind(this);
     this.handlePostRemove = this.handlePostRemove.bind(this);
+    // this.updateBackend = this.updateBackend.bind(this);
     this.state = {
       postList: []
     }
@@ -23,15 +24,16 @@ class PostList extends Component {
 
   updateBackend(){
     console.log('Updating....')
-    this.setState({
-      postItem:currentPostList
-    })
+  
   }
   handlePostRemove(postItem){
     let currentPostList = this.state.postList
     currentPostList.pop(postItem)
-    
-    this.updateBackend(currentPostList)
+
+    this.setState({
+      postItem:currentPostList
+    })
+    this.updateBackend()
   }
   componentDidMount(){
     this.setState({
