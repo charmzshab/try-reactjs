@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import PostData from '../data/posts.json'
+import React, { Component } from 'react';
+import PostData from '../data/posts.json';
+import PostDetail from './PostDetail';
 
 class PostList extends Component {
  
@@ -7,11 +8,8 @@ class PostList extends Component {
     return (
       <div >
         <h1>Hello There</h1>
-        {PostData.map((PostDetail, index) => {
-          return<div>
-            <h1>{PostDetail.title}</h1>
-            <p>{PostDetail.content}</p>
-          </div> 
+        {PostData.map((item, index) => {
+          return <PostDetail post={item} key={`post-list-key ${index}`} />
         })}
       </div>
     )

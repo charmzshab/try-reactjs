@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import PostList from './posts/PostList';
 import './App.css';
 
